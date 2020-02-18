@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="382.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event_mahdi.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="223.0" prefHeight="506.0" prefWidth="610.0">
+         <effect>
+            <DropShadow color="#e41919" />
+         </effect>
+         <children>
+            <Pane fx:id="pnl_stat" prefHeight="504.0" prefWidth="618.0" style="-fx-background-color: #2B3A67;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+            <Pane fx:id="pnl_event" prefHeight="504.0" prefWidth="618.0" style="-fx-background-color: #23CE6B;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <TextField fx:id="txt_nom" layoutX="48.0" layoutY="43.0" prefHeight="25.0" prefWidth="168.0" promptText="nom evennement" />
+                  <DatePicker fx:id="txt_date" layoutX="48.0" layoutY="82.0" prefHeight="25.0" prefWidth="168.0" promptText="date de debut" />
+                  <TextField fx:id="txt_duree" layoutX="48.0" layoutY="124.0" prefHeight="25.0" prefWidth="168.0" promptText="duree" />
+                  <Button fx:id="btn_add" layoutX="149.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="70.0" text="ajouter" />
+                  <TableView fx:id="table" editable="true" layoutX="31.0" layoutY="252.0" prefHeight="200.0" prefWidth="460.0">
+                    <columns>
+                      <TableColumn fx:id="col_nom" prefWidth="156.0" text="nom" />
+                      <TableColumn fx:id="col_date" prefWidth="148.0" text="date" />
+                        <TableColumn fx:id="col_duree" prefWidth="155.0" text="duree" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="combo_modif" layoutX="383.0" layoutY="95.0" prefWidth="150.0" promptText="select name" />
+                  <Button fx:id="event_delete" layoutX="464.0" layoutY="137.0" mnemonicParsing="false" onAction="#event_delete" text="supprimer" />
+                  <Button fx:id="event_modifier" layoutX="383.0" layoutY="137.0" mnemonicParsing="false" onAction="#event_modifier" prefHeight="25.0" prefWidth="70.0" text="details" />
+                  <JFXButton fx:id="btn_modif" layoutX="56.0" layoutY="162.0" onAction="#modif_event" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: white;" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_fidelite" prefHeight="506.0" prefWidth="618.0" style="-fx-background-color: #272D2D;">
+               <children>
+                  <TableView fx:id="tab_fidelite" layoutX="50.0" layoutY="298.0" prefHeight="168.0" prefWidth="521.0">
+                     <columns>
+                        <TableColumn fx:id="code_promo" prefWidth="261.0" text="code promo" />
+                        <TableColumn fx:id="pt_fidelite" prefWidth="259.0" text="points" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="nbr_inv" layoutX="462.0" layoutY="236.0" prefHeight="34.0" prefWidth="48.0" text="Label" textFill="WHITE" />
+                  <Label layoutX="333.0" layoutY="245.0" text="nombre des invitation" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="506.0" prefWidth="222.0" style="-fx-background-color: #F0F7FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="506.0" prefWidth="48.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="btn_event" layoutY="112.0" onAction="#handleButtonAction" prefHeight="67.0" prefWidth="222.0" text="evennement" />
+            <JFXButton fx:id="btn_fidelite" layoutY="179.0" onAction="#handleButtonAction" prefHeight="67.0" prefWidth="222.0" text="fidelite" />
+            <JFXButton fx:id="btn_stat" layoutY="246.0" onAction="#handleButtonAction" prefHeight="67.0" prefWidth="222.0" text="statistique" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

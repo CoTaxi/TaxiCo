@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="event_mahdi.jnlp">
+  <information>
+    <title>event_mahdi</title>
+    <vendor>mahdi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="event_mahdi.jar" size="27993" download="eager" />
+    <jar href="lib\NotificationAPI.jar" size="2821" download="eager" />
+    <jar href="lib\dsn.jar" size="19171" download="eager" />
+    <jar href="lib\gimap.jar" size="14769" download="eager" />
+    <jar href="lib\http-2.2.1.jar" size="82265" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\mail.jar" size="521000" download="eager" />
+    <jar href="lib\mailapi.jar" size="279893" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\pop3.jar" size="44405" download="eager" />
+    <jar href="lib\smtp.jar" size="52869" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="event_mahdi" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="event_mahdi.Event_mahdi"  name="event_mahdi" />
+  <update check="always"/>
+</jnlp>
