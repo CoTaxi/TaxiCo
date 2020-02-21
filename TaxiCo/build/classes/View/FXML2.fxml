@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1076.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXML2Controller">
+    <stylesheets>
+        <URL value="@fxml2.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1083.0" style="-fx-background-color: #4d5463;" />
+      <AnchorPane layoutX="260.0" layoutY="57.0" prefHeight="471.0" prefWidth="823.0" style="-fx-border-style: dotted;">
+         <children>
+            <TableView fx:id="tab_admin" layoutX="1.0" layoutY="34.0" onMouseClicked="#onselectedTab" prefHeight="435.0" prefWidth="818.0">
+              <columns>
+                <TableColumn fx:id="id_admin" prefWidth="42.666717529296875" text="ID" />
+                <TableColumn fx:id="msg_admin" prefWidth="219.99996948242188" text="Message" />
+                  <TableColumn fx:id="etat_admin" prefWidth="69.3333740234375" text="Etat" />
+                  <TableColumn fx:id="date_admin" prefWidth="134.66668701171875" text="Date Réclamation" />
+                  <TableColumn fx:id="rep_admin" prefWidth="142.666748046875" text="Réponse admin" />
+                  <TableColumn fx:id="mat" prefWidth="204.6666259765625" text="Matricule vehicule" />
+              </columns>
+            </TableView>
+            <Button fx:id="imp_btn" layoutX="617.0" layoutY="4.0" mnemonicParsing="false" onAction="#btn_convertirPDF" prefHeight="25.0" prefWidth="202.0" text="Imprimer réclamations">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="4.0" layoutY="92.0" prefHeight="435.0" prefWidth="251.0" style="-fx-border-style: dotted;">
+         <children>
+            <Label fx:id="lbl_etat" layoutX="8.0" layoutY="230.0" text="Etat : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboEtat" layoutX="50.0" layoutY="227.0" prefHeight="25.0" prefWidth="193.0" promptText="Changer l'état">
+               <effect>
+                  <Glow />
+               </effect>
+            </ComboBox>
+            <TextArea fx:id="txt_repAdmin" layoutX="5.0" layoutY="2.0" prefHeight="201.0" prefWidth="241.0" promptText="Votre réponse ici..." />
+            <Button fx:id="DelAdmin_btn" layoutX="12.0" layoutY="325.0" mnemonicParsing="false" onAction="#btn_deleteRecAdmin" prefHeight="23.0" prefWidth="60.0" text="Supprimer">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Separator layoutX="12.0" layoutY="216.0" prefHeight="4.0" prefWidth="227.0" />
+            <Separator layoutX="12.0" layoutY="267.0" prefHeight="4.0" prefWidth="227.0" />
+            <Button fx:id="editAdmin_btn" layoutX="185.0" layoutY="325.0" mnemonicParsing="false" onAction="#editerRepAdmin" text="Modifier">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveAdmin_btn" layoutX="95.0" layoutY="325.0" mnemonicParsing="false" onAction="#btn_saveEditAdmin" text="Enregistrer">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
