@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -20,14 +21,14 @@
       <AnchorPane prefHeight="57.0" prefWidth="1083.0" style="-fx-background-color: #4d5463;" />
       <AnchorPane layoutX="260.0" layoutY="57.0" prefHeight="471.0" prefWidth="823.0" style="-fx-border-style: dotted;">
          <children>
-            <TableView fx:id="tab_admin" layoutX="1.0" layoutY="34.0" onMouseClicked="#onselectedTab" prefHeight="435.0" prefWidth="818.0">
+            <TableView fx:id="tab_admin" layoutX="2.0" layoutY="34.0" onMouseClicked="#onselectedTab" prefHeight="435.0" prefWidth="817.0">
               <columns>
-                <TableColumn fx:id="id_admin" prefWidth="42.666717529296875" text="ID" />
-                <TableColumn fx:id="msg_admin" prefWidth="219.99996948242188" text="Message" />
-                  <TableColumn fx:id="etat_admin" prefWidth="69.3333740234375" text="Etat" />
-                  <TableColumn fx:id="date_admin" prefWidth="134.66668701171875" text="Date Réclamation" />
-                  <TableColumn fx:id="rep_admin" prefWidth="142.666748046875" text="Réponse admin" />
-                  <TableColumn fx:id="mat" prefWidth="204.6666259765625" text="Matricule vehicule" />
+                <TableColumn fx:id="id_admin" prefWidth="42.666717529296875" text="ID" visible="false" />
+                <TableColumn fx:id="msg_admin" prefWidth="226.66668701171875" text="Message" />
+                  <TableColumn fx:id="etat_admin" prefWidth="86.66665649414062" text="Etat" />
+                  <TableColumn fx:id="date_admin" prefWidth="142.66668701171875" text="Date Réclamation" />
+                  <TableColumn fx:id="rep_admin" prefWidth="166.66668701171875" text="Réponse admin" />
+                  <TableColumn fx:id="mat" prefWidth="192.0001220703125" text="Prénom &amp; Nom" />
               </columns>
             </TableView>
             <Button fx:id="imp_btn" layoutX="617.0" layoutY="4.0" mnemonicParsing="false" onAction="#btn_convertirPDF" prefHeight="25.0" prefWidth="202.0" text="Imprimer réclamations">
@@ -35,6 +36,7 @@
                   <Glow />
                </effect>
             </Button>
+            <TextField fx:id="findPrename" layoutX="2.0" layoutY="4.0" prefHeight="25.0" prefWidth="263.0" promptText="Recherche..." />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="4.0" layoutY="92.0" prefHeight="435.0" prefWidth="251.0" style="-fx-border-style: dotted;">

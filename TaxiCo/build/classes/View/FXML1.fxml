@@ -27,12 +27,13 @@
          <children>
             <AnchorPane fx:id="anchorpane_left" layoutX="273.0" layoutY="14.0" prefHeight="368.0" prefWidth="603.0" style="-fx-border-style: dotted;">
                <children>
-                  <TableView fx:id="tab_view" layoutX="3.0" layoutY="2.0" onMouseClicked="#testEtat" prefHeight="362.0" prefWidth="596.0">
+                  <TableView fx:id="tab_view" layoutX="3.0" layoutY="2.0" onMouseClicked="#testEtat" prefHeight="362.0" prefWidth="603.0">
                     <columns>
-                      <TableColumn fx:id="clnm1" prefWidth="233.99996948242188" text="Votre message" />
-                      <TableColumn fx:id="clnm2" prefWidth="78.66668701171875" text="Etat" />
-                        <TableColumn fx:id="clnm3" prefWidth="176.0" text="Date" />
-                        <TableColumn fx:id="clnm4" prefWidth="105.33331298828125" text="Réponse" />
+                        <TableColumn fx:id="clnm5" minWidth="0.0" prefWidth="64.66668701171875" text="Id" visible="false" />
+                      <TableColumn fx:id="clnm1" prefWidth="246.0" text="Votre message1" />
+                      <TableColumn fx:id="clnm2" minWidth="0.0" prefWidth="75.3333740234375" text="Etat" />
+                        <TableColumn fx:id="clnm3" prefWidth="108.66668701171875" text="Date" />
+                        <TableColumn fx:id="clnm4" minWidth="0.0" prefWidth="171.33331298828125" text="Réponse" />
                     </columns>
                   </TableView>
                </children>
