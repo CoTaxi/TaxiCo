@@ -40,22 +40,22 @@
             </AnchorPane>
             <AnchorPane fx:id="anchorpane_right" layoutX="2.0" layoutY="14.0" prefHeight="368.0" prefWidth="267.0" style="-fx-background-color: 36324D;">
                <children>
-                  <Button fx:id="btn_add" layoutX="17.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_addRec" prefHeight="19.0" prefWidth="55.0" style="-fx-background-color: #f99f1b;" text="Envoyer">
+                  <Button fx:id="btn_add" layoutX="17.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_addRec" prefHeight="19.0" prefWidth="55.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Envoyer">
                      <font>
                         <Font size="9.0" />
                      </font></Button>
                   <TextArea fx:id="msg_txt" layoutX="3.0" layoutY="3.0" prefHeight="142.0" prefWidth="251.0" promptText="Votre message ici..." AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
-                  <Button fx:id="btn_del" layoutX="78.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_deleteRec" style="-fx-background-color: #f99f1b;" text="Supprimer">
+                  <Button fx:id="btn_del" layoutX="78.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_deleteRec" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Supprimer">
                      <font>
                         <Font size="9.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btn_edit" layoutX="137.0" layoutY="293.0" mnemonicParsing="false" onAction="#editRec" style="-fx-background-color: #f99f1b;" text="Modifier">
+                  <Button fx:id="btn_edit" layoutX="137.0" layoutY="293.0" mnemonicParsing="false" onAction="#editRec" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Modifier">
                      <font>
                         <Font size="9.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btn_save" layoutX="191.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_saveEditRec" prefHeight="19.0" prefWidth="55.0" style="-fx-background-color: #f99f1b;" text="Enregistrer">
+                  <Button fx:id="btn_save" layoutX="191.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_saveEditRec" prefHeight="19.0" prefWidth="55.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Enregistrer">
                      <font>
                         <Font size="9.0" />
                      </font>
@@ -65,12 +65,12 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="combo_list_pre" layoutX="3.0" layoutY="205.0" onAction="#btn_afficherNomChauffeur" prefHeight="25.0" prefWidth="129.0" promptText="Prénom" style="-fx-background-color: #f99f1b;">
+                  <ComboBox fx:id="combo_list_pre" layoutX="3.0" layoutY="205.0" onAction="#btn_afficherNomChauffeur" prefHeight="25.0" prefWidth="129.0" promptText="Prénom" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;">
                      <effect>
                         <Glow />
                      </effect>
                   </ComboBox>
-                  <ComboBox fx:id="combo_list_name" layoutX="135.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="Nom" style="-fx-background-color: #f99f1b;">
+                  <ComboBox fx:id="combo_list_name" layoutX="135.0" layoutY="205.0" prefHeight="25.0" prefWidth="129.0" promptText="Nom" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;">
                      <effect>
                         <Glow />
                      </effect>
