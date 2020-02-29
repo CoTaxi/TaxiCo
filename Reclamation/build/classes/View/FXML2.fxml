@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1076.0" style="-fx-background-color: #36324D;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXML2Controller">
+    <stylesheets>
+        <URL value="@fxml2.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="statpane" layoutX="125.0" prefHeight="528.0" prefWidth="830.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btn_stat_close" layoutX="745.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleCloseStat" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Fermer" />
+            <PieChart fx:id="statPie" labelLineLength="30.0" layoutX="90.0" layoutY="5.0" prefHeight="495.0" prefWidth="651.0" title="Statistiques des réclamations">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </PieChart>
+            <Label layoutX="19.0" layoutY="508.0" text="Appuyer pour changer des couleurs">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane2" prefHeight="528.0" prefWidth="1083.0" style="-fx-background-color: #36324D;">
+         <children>
+            <Button fx:id="btn_stat" layoutX="160.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleStat" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Afficher statistiques" />
+            <Button fx:id="btn_arch" layoutX="13.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleAdmin" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Gérer les réclamations" />
+            <TextField fx:id="txt_arch" layoutX="13.0" layoutY="62.0" prefHeight="25.0" prefWidth="307.0" promptText="Chercher votre archive..." />
+            <TableView fx:id="tab_arch" layoutX="13.0" layoutY="91.0" prefHeight="366.0" prefWidth="1057.0">
+              <columns>
+                <TableColumn fx:id="id_arch" prefWidth="54.6666898727417" text="ID" visible="false" />
+                <TableColumn fx:id="msg_arch" prefWidth="251.9999771118164" text="Message" />
+                  <TableColumn fx:id="etat_arch" prefWidth="125.3333740234375" text="Etat" />
+                  <TableColumn fx:id="date_arch" prefWidth="158.66665649414062" text="Date de réclamation" />
+                  <TableColumn fx:id="rep_arch" prefWidth="220.00006103515625" text="Réponse admin" />
+                  <TableColumn fx:id="pre_arch" prefWidth="248.0" text="Prénom &amp; Nom" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_supp_arch" layoutX="951.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleAdmin" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Supprimer archives" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane1" prefHeight="528.0" prefWidth="1083.0" style="-fx-background-color: #36324D;">
+         <children>
+            <AnchorPane prefHeight="57.0" prefWidth="1083.0" style="-fx-background-color: #36324D;">
+               <children>
+                  <Label fx:id="lael_txt" layoutX="24.0" layoutY="15.0" prefHeight="33.0" prefWidth="217.0" text="Gérer vos réclamations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="471.0" prefWidth="823.0">
+               <children>
+                  <TableView fx:id="tab_admin" layoutX="254.0" layoutY="92.0" onMouseClicked="#onselectedTab" prefHeight="422.0" prefWidth="817.0">
+                    <columns>
+                      <TableColumn fx:id="id_admin" prefWidth="42.666717529296875" text="ID" visible="false" />
+                      <TableColumn fx:id="msg_admin" prefWidth="226.66668701171875" text="Message" />
+                        <TableColumn fx:id="etat_admin" prefWidth="86.66665649414062" text="Etat" />
+                        <TableColumn fx:id="date_admin" prefWidth="142.66668701171875" text="Date Réclamation" />
+                        <TableColumn fx:id="rep_admin" prefWidth="166.66668701171875" text="Réponse admin" />
+                        <TableColumn fx:id="mat" prefWidth="192.0001220703125" text="Prénom &amp; Nom" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="imp_btn" layoutX="869.0" layoutY="61.0" mnemonicParsing="false" onAction="#convertirPDF" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Imprimer réclamations">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <AnchorPane layoutY="85.0" prefHeight="435.0" prefWidth="251.0">
+                     <children>
+                        <Label fx:id="lbl_etat" layoutX="8.0" layoutY="247.0" text="Etat : " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboEtat" layoutX="50.0" layoutY="244.0" prefHeight="25.0" prefWidth="193.0" promptText="Changer l'état" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </ComboBox>
+                        <TextArea fx:id="txt_repAdmin" layoutX="5.0" layoutY="7.0" prefHeight="201.0" prefWidth="241.0" promptText="Votre réponse ici..." />
+                        <Button fx:id="DelAdmin_btn" layoutX="11.0" layoutY="309.0" mnemonicParsing="false" onAction="#btn_deleteRecAdmin" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Supprimer">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="12.0" layoutY="216.0" prefHeight="4.0" prefWidth="227.0" />
+                        <Separator layoutX="12.0" layoutY="292.0" prefHeight="4.0" prefWidth="227.0" />
+                        <Button fx:id="editAdmin_btn" layoutX="97.0" layoutY="309.0" mnemonicParsing="false" onAction="#editerRepAdmin" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Modifier">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saveAdmin_btn" layoutX="174.0" layoutY="308.0" mnemonicParsing="false" onAction="#btn_saveEditAdmin" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Enregistrer">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="mail_btn" layoutX="88.0" layoutY="405.0" mnemonicParsing="false" onAction="#sendEmail" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Envoyer Email">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_archive" layoutX="66.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleArchive" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Afficher Archive" />
+                        <Button fx:id="btn_stat_View" layoutX="58.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleStat" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #f99f1b; -fx-background-radius: 7em;" text="Afficher statistiques" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
